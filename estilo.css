@@ -1,0 +1,440 @@
+/* RESET Y BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0a0a0f;
+    color: #e5e7eb;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* TITULOS */
+h1, .main-title, .titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 36px 0 28px 0;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 0 2px 16px rgba(99,102,241,0.08);
+}
+
+@media (max-width: 700px) {
+    h1, .main-title, .titulo {
+        font-size: 1.6rem;
+        margin: 18px 0 12px 0;
+    }
+}
+
+/* PRESENTACION */
+.presentacion {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 0 40px 0;
+    width: 100%;
+}
+
+.datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    text-align: left;
+    padding: 18px 0;
+    color: #e5e7eb;
+    max-width: 420px;
+}
+
+.datos h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.datos h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #a5b4fc;
+    text-align: center;
+}
+
+.imagen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fotodeperfil {
+    width: 340px;
+    height: 340px;
+    border-radius: 24px;
+    object-fit: cover;
+    box-shadow: 0 8px 40px rgba(99,102,241,0.10);
+    mask-image: linear-gradient(to right, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
+}
+
+/* PROYECTOS */
+.proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 36px;
+    justify-items: center;
+    margin: 40px 0;
+}
+
+.proyecto-card, .proyecto-card.big-card {
+    background: #18181b;
+    border-radius: 20px;
+    border: 2.5px solid #232336;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.14);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    max-width: 420px;
+    min-height: 440px;
+    text-decoration: none;
+    color: #e5e7eb;
+    transition: transform 0.18s, box-shadow 0.18s, border 0.18s;
+    position: relative;
+}
+
+.proyecto-card:hover, .proyecto-card.big-card:hover {
+    transform: translateY(-12px) scale(1.035);
+    border-color: #6366f1;
+    box-shadow: 0 16px 48px rgba(99,102,241,0.18);
+    z-index: 2;
+}
+
+.border-green { border-color: #22c55e !important; }
+.border-orange { border-color: #f59e42 !important; }
+.border-blue { border-color: #3b82f6 !important; }
+.border-purple { border-color: #a21caf !important; }
+
+.proyecto-img-wrap {
+    width: 100%;
+    background: #232336;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    max-height: 200px;
+    overflow: hidden;
+}
+.proyecto-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    background: #222;
+}
+
+.proyecto-info {
+    padding: 28px 24px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+}
+
+.proyecto-icon {
+    font-size: 2rem;
+    margin-bottom: 6px;
+}
+
+.proyecto-titulo {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.proyecto-desc {
+    font-size: 1.08rem;
+    color: #cbd5e1;
+    margin-bottom: 8px;
+    flex: 1;
+}
+
+.proyecto-meta {
+    font-size: 1rem;
+    color: #7dd3fc;
+    margin-bottom: 8px;
+}
+
+.proyecto-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+.proyecto-tags span {
+    background: #232336;
+    color: #60a5fa;
+    border-radius: 6px;
+    padding: 4px 14px;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 6px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+    border: 1px solid #334155;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.proyecto-tags span:hover {
+    background: #1e293b;
+    color: #fff;
+    border: 1px solid #60a5fa;
+}
+
+/* SKILLS SECTION */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    justify-items: center;
+    margin: 40px 0;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: transparent;
+    border: 1.5px solid #333;
+    border-radius: 14px;
+    width: 260px;
+    height: 70px;
+    justify-content: flex-start;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: box-shadow 0.2s, border 0.2s, background 0.2s;
+    padding: 0 18px;
+    gap: 18px;
+    margin: 8px 0;
+}
+
+.skill-card:hover {
+    border: 1.5px solid #6366f1;
+    background: #232336;
+    box-shadow: 0 8px 24px rgba(99,102,241,0.10);
+}
+
+.skill-icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.skill-card span {
+    color: #e5e7eb;
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    background: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+}
+
+/* SOBRE MI */
+.sobremi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto 80px auto;
+    padding: 0 20px;
+}
+
+.Descaragar,
+.Descargar {
+    cursor: pointer;
+    color: #fff;
+    background-color: #6366f1;
+    height: 50px;
+    width: 200px;
+    border-radius: 100px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    gap: 10px;
+}
+
+.Descargar:hover {
+    background-color: #4f46e5;
+    box-shadow: 0 4px 20px rgba(99,102,241,0.4);
+}
+
+.descripcion {
+    font-size: 1.2rem;
+    text-align: center;
+    text-shadow: 0 0 6px #3b82f6;
+    overflow-wrap: break-word;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #18181b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    color: #ccc;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.footer .card {
+    border: none;
+}
+
+.footer ul {
+    list-style: none;
+    margin-top: 12px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 0;
+}
+
+.footer ul li a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #3b82f6;
+}
+
+/* RESPONSIVE */
+
+/* Para móviles: columna en presentación y tamaño imagen más pequeño */
+@media (max-width: 900px) {
+    .presentacion {
+        flex-direction: column;
+        gap: 40px;
+        margin: 60px 0 40px 0;
+    }
+
+    .datos {
+        max-width: 100%;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .datos h2 {
+        text-align: center;
+    }
+
+    .fotodeperfil {
+        width: 260px;
+        height: 260px;
+        border-radius: 24px;
+        mask-image: none;
+        -webkit-mask-image: none;
+        box-shadow: 0 6px 30px rgba(99,102,241,0.12);
+    }
+}
+
+/* Ajuste proyectos en grid para pantallas medianas y pequeñas */
+@media (max-width: 850px) {
+    .proyectos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        justify-items: center;
+        margin: 40px 0;
+    }
+
+    .proyecto-card {
+        min-width: 280px;
+        max-width: 320px;
+        min-height: 400px;
+    }
+
+    .proyecto-img {
+        height: 160px;
+    }
+}
+
+/* Para pantallas pequeñas móviles */
+@media (max-width: 450px) {
+    body {
+        padding: 0 12px;
+    }
+
+    .presentacion {
+        margin: 40px 0 30px 0;
+    }
+
+    .datos h1 {
+        font-size: 1.8rem;
+    }
+
+    .datos h2 {
+        font-size: 1rem;
+    }
+
+    .fotodeperfil {
+        width: 200px;
+        height: 200px;
+    }
+
+    .proyectos {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .proyecto-card {
+        min-width: 100%;
+        max-width: 100%;
+        min-height: auto;
+    }
+
+    .proyecto-img {
+        height: 140px;
+    }
+
+    .descripcion {
+        font-size: 1rem;
+    }
+
+    .Descargar {
+        width: 180px;
+        height: 44px;
+        font-size: 1rem;
+    }
+}
