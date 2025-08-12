@@ -1,173 +1,197 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="estilo.css" />
-    <title>Portafolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <title>Portafolio</title>
 </head>
-<body>
-    <section>
-        <div class="presentacion">
-            <div class="datos">
-                <h1>Yonatan Escalona Carrasco</h1>
-                <h2>Estudiante de Ingeniería en Informática</h2>
-            </div>
+<body class="bg-black text-white font-sans">
 
-            <div class="imagen">
-                <img src="yo.png" alt="Yon" class="fotodeperfil" />
-            </div>
+  <section class="py-10">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+      <div class="text-center md:text-left">
+        <h1 class="text-4xl font-bold">Yonatan Escalona Carrasco</h1>
+        <h2 class="text-2xl mt-2 text-indigo-400">Estudiante de Ingeniería en Informática</h2>
+      </div>
+      <div>
+        <img 
+          src="yo.png" 
+          alt="Yon" 
+          class="w-52 h-52 md:w-80 md:h-80 object-cover rounded-2xl shadow-2xl"
+          style="mask-image: linear-gradient(to right, black 80%, transparent 100%); -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);" 
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">Nuestros Servicios</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <div class="bg-gradient-to-br from-indigo-600 via-blue-500 to-blue-400 shadow-lg rounded-2xl p-6 flex flex-col text-white">
+          <h3 class="text-xl font-semibold mb-4">Plan Básico</h3>
+          <p class="text-4xl font-bold text-white mb-5">
+            $45.000 <span class="text-base font-normal text-blue-100">CLP</span>
+          </p>
+          <ul class="space-y-3 mb-6">
+            <li>✅ Página de inicio</li>
+            <li>✅ Diseño adaptado a celular</li>
+            <li>✅ Formulario de contacto</li>
+            <li>✅ Diseño básico y sencillo</li>
+            <li class="mt-4 font-semibold text-blue-100">Dominio .cl disponible por <span class="text-white">$10.000 CLP</span> adicionales</li>
+          </ul>
+          <a 
+            href="#" 
+            onclick="enviarWsp('Plan Básico')" 
+            class="mt-auto bg-white hover:bg-blue-100 text-blue-700 font-semibold py-3 rounded-lg text-center transition block"
+          >Contratar</a>
         </div>
-    </section>
 
-    <main>
-        <h1 class="proyectos">Mis proyectos</h1>
-
-        <div class="proyectos">
-            <a href="https://escalona312.github.io/Soluciones-Integrales/" target="_blank" class="card proyecto-card">
-                <img src="soluciones.png" alt="Soluciones Integrales" class="proyecto-img" />
-                <div class="proyecto-info">
-                    <h3 class="proyecto-titulo">Soluciones Integrales</h3>
-                    <p class="proyecto-desc">
-                        Página web para empresa de servicios eléctricos e industriales, con diseño moderno y enfoque en la presentación clara de servicios.
-                    </p>
-                    <div class="proyecto-tags">
-                        <span>HTML</span>
-                        <span>tailwind css</span>
-                        <span>JavaScript</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://escalona312.github.io/barberia-web/" target="_blank" class="card proyecto-card">
-                <img src="barber.png" alt="Barbería Web" class="proyecto-img" />
-                <div class="proyecto-info">
-                    <h3 class="proyecto-titulo">Barbería Web</h3>
-                    <p class="proyecto-desc">
-                        Sitio web profesional para una barbería, diseñado para mejorar su presencia digital y atraer nuevos clientes. Incluye galería, servicios y formulario de contacto.
-                    </p>
-                    <div class="proyecto-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://escalona312.github.io/molly/" target="_blank" class="card proyecto-card">
-                <img src="molly.png" alt="Molly" class="proyecto-img" />
-                <div class="proyecto-info">
-                    <h3 class="proyecto-titulo">Molly</h3>
-                    <p class="proyecto-desc">
-                        Landing page moderna y adaptable para una marca personal o negocio, enfocada en la presentación profesional de servicios y portafolio.
-                    </p>
-                    <div class="proyecto-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Bootstrap</span>
-                        <span>JavaScript</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://escalona312.github.io/EntrenadosGYM/" target="_blank" class="card proyecto-card">
-                <img src="image.png" alt="Entrenados GYM" class="proyecto-img" />
-                <div class="proyecto-info">
-                    <h3 class="proyecto-titulo">Entrenados GYM</h3>
-                    <p class="proyecto-desc">
-                        Página web para gimnasio con diseño dinámico, información de servicios, entrenadores y formulario de contacto para nuevos clientes.
-                    </p>
-                    <div class="proyecto-tags">
-                        <span>HTML</span>
-                        <span>tailwind css</span>
-                        <span>JavaScript</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://reportefinalfinal.onrender.com/" target="_blank" class="card proyecto-card">
-                <img src="reporte.png" alt="Reportes Verdes" class="proyecto-img" />
-                <div class="proyecto-info">
-                    <h3 class="proyecto-titulo">Reportes Verdes</h3>
-                    <p class="proyecto-desc">
-                        Sistema web universitario para reportar problemas medioambientales, facilitando la gestión y seguimiento de reportes para mejorar el entorno.
-                    </p>
-                    <div class="proyecto-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Node.js</span>
-                        <span>JavaScript</span>
-                    </div>
-                </div>
-            </a>
+        <div class="relative bg-gradient-to-br from-yellow-50 via-blue-100 to-blue-200 shadow-2xl border-4 border-yellow-400 rounded-2xl p-8 flex flex-col text-blue-900 scale-105 z-10 ring-4 ring-yellow-200">
+          <span class="absolute -top-4 right-4 bg-yellow-400 text-blue-900 text-base font-bold px-4 py-2 rounded-bl-lg rounded-tr-lg shadow-lg animate-bounce">⭐ Recomendado</span>
+          <h3 class="text-2xl font-extrabold mb-4 text-blue-900">Plan Profesional</h3>
+          <p class="text-5xl font-extrabold text-yellow-500 mb-5 drop-shadow">
+            $65.000 <span class="text-base font-normal text-gray-500">CLP</span>
+          </p>
+          <ul class="space-y-3 mb-6 text-lg">
+            <li>✅ Todo lo del Plan Básico</li>
+            <li>✅ Diseño a medida adaptado a la identidad de tu marca</li>
+            <li>✅ Mockup previo para visualizar el diseño</li>
+            <li>✅ Optimización de velocidad y rendimiento</li>
+            <li>✅ Botones de WhatsApp estratégicos para contacto directo</li>
+            <li>✅ Formulario de contacto avanzado</li>
+            <li>✅ 3 meses de mantenimiento incluido</li>
+            <li>✅ Mapa de ubicación interactivo</li>
+            <li class="mt-4 font-semibold text-yellow-600">Dominio .cl disponible por <span class="text-blue-600">$10.000 CLP</span> adicionales</li>
+          </ul>
+          <a 
+            href="#" 
+            onclick="enviarWsp('Plan Profesional')" 
+            class="mt-auto bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-extrabold py-3 rounded-lg text-center transition shadow-lg block"
+          >Contratar</a>
         </div>
-    </main>
 
-    <section>
-        <h1 class="main-title">Habilidades y tecnologías</h1>
-        <div class="skills-container">
-            <div class="skill-card">
-                <svg class="skill-icon" viewBox="0 0 32 32" width="40" height="40">
-                    <rect width="32" height="32" rx="6" fill="#E44D26" />
-                    <text x="16" y="22" font-size="14" text-anchor="middle" fill="white" font-family="Arial">HTML</text>
-                </svg>
-                <span>HTML5</span>
-            </div>
-            <div class="skill-card">
-                <svg class="skill-icon" viewBox="0 0 32 32" width="40" height="40">
-                    <rect width="32" height="32" rx="6" fill="#1572B6" />
-                    <text x="16" y="22" font-size="14" text-anchor="middle" fill="white" font-family="Arial">CSS</text>
-                </svg>
-                <span>CSS3</span>
-            </div>
-            <div class="skill-card">
-                <svg class="skill-icon" viewBox="0 0 32 32" width="40" height="40">
-                    <rect width="32" height="32" rx="6" fill="#F7DF1E" />
-                    <text x="16" y="22" font-size="14" text-anchor="middle" fill="#222" font-family="Arial">JS</text>
-                </svg>
-                <span>JavaScript</span>
-            </div>
-            <div class="skill-card">
-                <svg class="skill-icon" viewBox="0 0 32 32" width="40" height="40">
-                    <rect width="32" height="32" rx="6" fill="#339933" />
-                    <text x="16" y="22" font-size="12" text-anchor="middle" fill="white" font-family="Arial">Node</text>
-                </svg>
-                <span>Node.js</span>
-            </div>
-            <div class="skill-card">
-                <svg class="skill-icon" viewBox="0 0 32 32" width="40" height="40">
-                    <rect width="32" height="32" rx="6" fill="#7952B3" />
-                    <text x="16" y="22" font-size="12" text-anchor="middle" fill="white" font-family="Arial">BS</text>
-                </svg>
-                <span>Bootstrap</span>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="px-6 md:px-16">
+    <h1 class="text-3xl font-bold text-center mb-10">Mis proyectos</h1>
+    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="https://escalona312.github.io/Soluciones-Integrales/" target="_blank" class="bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+        <img src="soluciones.png" alt="Soluciones Integrales" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Soluciones Integrales</h3>
+          <p class="text-sm mb-4">Página web para empresa de servicios eléctricos e industriales, con diseño moderno y enfoque en la presentación clara de servicios.</p>
+          <div class="flex gap-2 flex-wrap text-xs text-indigo-400">
+            <span>HTML</span><span>Tailwind CSS</span><span>JavaScript</span>
+          </div>
         </div>
-    </section>
+      </a>
 
-    <section>
-        <div class="sobremi">
-            <h1>Sobre mí</h1>
-            <p class="descripcion">
-                Soy un estudiante de Ingeniería en Informática con una pasión por el desarrollo web y la creación de soluciones tecnológicas. Me encanta aprender nuevas tecnologías y mejorar mis habilidades constantemente. Actualmente, estoy trabajando en varios proyectos que me permiten aplicar mis conocimientos y explorar nuevas áreas en el campo de la informática.
-            </p>
-
-            <button class="Descargar">
-                <a href="YonatanEscalonaCV.pdf" download>Descargar CV</a>
-            </button>
+      <a href="https://escalona312.github.io/barberia-web/" target="_blank" class="bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+        <img src="barber.png" alt="Barbería Web" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Barbería Web</h3>
+          <p class="text-sm mb-4">Sitio web profesional para una barbería, con galería, servicios y formulario de contacto.</p>
+          <div class="flex gap-2 flex-wrap text-xs text-indigo-400">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
         </div>
-    </section>
+      </a>
 
-    <footer>
-        <div class="footer">
-            <div class="card">
-                <p>© 2023 Yonatan Escalona Carrasco. Todos los derechos reservados.</p>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/yonatan-escalona-carrasco-444258360/" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://wa.me/56959279107?text=Mensaje%20a%20enviar" target="_blank">whatsapp</a></li>
-
-                </ul>
-            </div>
+      <a href="https://escalona312.github.io/molly/" target="_blank" class="bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+        <img src="molly.png" alt="Molly" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Molly</h3>
+          <p class="text-sm mb-4">Landing page moderna para marca personal o negocio.</p>
+          <div class="flex gap-2 flex-wrap text-xs text-indigo-400">
+            <span>HTML</span><span>CSS</span><span>Bootstrap</span><span>JavaScript</span>
+          </div>
         </div>
-    </footer>
+      </a>
+
+      <a href="https://escalona312.github.io/EntrenadosGYM/" target="_blank" class="bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+        <img src="image.png" alt="Entrenados GYM" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Entrenados GYM</h3>
+          <p class="text-sm mb-4">Sitio para gimnasio con servicios y formulario de contacto.</p>
+          <div class="flex gap-2 flex-wrap text-xs text-indigo-400">
+            <span>HTML</span><span>Tailwind CSS</span><span>JavaScript</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://reportefinalfinal.onrender.com/" target="_blank" class="bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+        <img src="reporte.png" alt="Reportes Verdes" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Reportes Verdes</h3>
+          <p class="text-sm mb-4">Sistema web para reportar problemas medioambientales fue hecho para ayudar en el campus de santo tomas </p>
+          <div class="flex gap-2 flex-wrap text-xs text-indigo-400">
+            <span>HTML</span><span>CSS</span><span>Node.js</span><span>JavaScript</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <section class="mt-16 px-6 md:px-16">
+    <h1 class="text-3xl font-bold text-center mb-10">Habilidades y tecnologías</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
+      <div class="flex items-center gap-4 border border-gray-700 rounded-lg p-4 w-64 bg-gray-800 hover:border-indigo-500 hover:shadow-xl transition">
+        <i class="devicon-html5-plain colored text-4xl"></i>
+        <span class="text-lg font-semibold">HTML5</span>
+      </div>
+      <div class="flex items-center gap-4 border border-gray-700 rounded-lg p-4 w-64 bg-gray-800 hover:border-indigo-500 hover:shadow-xl transition">
+        <i class="devicon-css3-plain colored text-4xl"></i>
+        <span class="text-lg font-semibold">CSS3</span>
+      </div>
+      <div class="flex items-center gap-4 border border-gray-700 rounded-lg p-4 w-64 bg-gray-800 hover:border-indigo-500 hover:shadow-xl transition">
+        <i class="devicon-javascript-plain colored text-4xl"></i>
+        <span class="text-lg font-semibold">JavaScript</span>
+      </div>
+      <div class="flex items-center gap-4 border border-gray-700 rounded-lg p-4 w-64 bg-gray-800 hover:border-indigo-500 hover:shadow-xl transition">
+        <i class="devicon-nodejs-plain colored text-4xl"></i>
+        <span class="text-lg font-semibold">Node.js</span>
+      </div>
+      <div class="flex items-center gap-4 border border-gray-700 rounded-lg p-4 w-64 bg-gray-800 hover:border-indigo-500 hover:shadow-xl transition">
+        <i class="devicon-bootstrap-plain colored text-4xl"></i>
+        <span class="text-lg font-semibold">Bootstrap</span>
+      </div>
+      <div class="flex items-center gap-4 border border-gray-700 rounded-lg p-4 w-64 bg-gray-800 hover:border-indigo-500 hover:shadow-xl transition">
+        <i class="devicon-tailwindcss-plain colored text-4xl"></i>
+        <span class="text-lg font-semibold">Tailwind CSS</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-16 px-6 md:px-16">
+    <div class="text-center">
+      <h1 class="text-3xl font-bold mb-4">Sobre mí</h1>
+      <p class="mb-6 text-gray-300 max-w-2xl mx-auto">Soy un estudiante de Ingeniería en Informática con pasión por el desarrollo web y la creación de soluciones tecnológicas. Me encanta aprender y aplicar nuevas tecnologías en mis proyectos personales.</p>
+      <a href="YonatanEscalonaCV.pdf" download class="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg transition">Descargar CV</a>
+    </div>
+  </section>
+
+  <footer class="mt-16 bg-black-800 py-6 border-t border-gray-700">
+    <div class="text-center">
+      <p class="mb-2 text-gray-400">© 2025 Yonatan Escalona Carrasco. Todos los derechos reservados.</p>
+      <div class="flex justify-center gap-6 text-indigo-400">
+        <a href="https://www.linkedin.com/in/yonatan-escalona-carrasco-444258360/" target="_blank" class="hover:underline">LinkedIn</a>
+        <a href="https://wa.me/56959279107?text=Hola%20a%20" target="_blank" class="hover:underline">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function enviarWsp(servicio) {
+      const numero = "56959279107";
+      const mensaje = encodeURIComponent(`Hola, quiero contratar el servicio: ${servicio}`);
+      window.open(`https://wa.me/${numero}?text=${mensaje}`, "_blank");
+    }
+  </script>
 </body>
 </html>
